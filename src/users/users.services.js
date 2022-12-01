@@ -22,7 +22,7 @@ const postNewUser = (req, res) => {
     const { first_name, last_name, email, password, birthday } = req.body
 
     if (first_name, last_name, email, password, birthday) {
-        const data = userControllers.createNewUser(first_name, last_name, email, password, birthday)
+        const data = userControllers.createNewUser({first_name, last_name, email, password, birthday})
         res.status(201).json(data)
     } else {
         res.status(400).json({
